@@ -11,6 +11,25 @@
 
 <script>
 
+	//IEとそれ以外で分けて、DOMの構成が終了を知らせるイベントをつくる。
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	if (userAgent.indexOf('msie') != -1)
+	{
+		console.log("IE");
+		window.attachEvent("onload",filltext());
+	}
+	else
+	{
+		console.log("IE以外");
+		document.addEventListener("DOMContentLoaded",filltext(),true);
+	}
+	
+	//textを埋めるためのscript
+	function filltext()
+	{
+		var text = document.getElementById("text");
+		text.innerHTML = "Hello World";
+	}
 	
 	
 </script>
