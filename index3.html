@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>script内の関数を実行</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+		
+	<p id="text">〇〇〇</p>
+
+<script>
+
+	//DOMがすべて構成されてから、filltextが実行されるようにイベントリスナーを設置する。
+	document.addEventListener("DOMContentLoaded",filltext(),true);
+	
+	//textを埋めるためのscript
+	function filltext()
+	{
+		var text = document.getElementById("text");
+		text.innerHTML = "Hello World";
+	}
+	
+	
+</script>
+</body>
+</html>
+
