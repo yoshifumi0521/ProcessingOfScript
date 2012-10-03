@@ -1,0 +1,8 @@
+
+index4.htmlのユーザーエージェントごとに分けるほうがいいという結論。
+
+DOMContentLoadedはなるべくつかったほうがいい。
+onloadの場合、重い画像処理などがあった場合、処理が遅くなってしまう。
+
+DOMContentLoadedはIEでは対応してないので、onloadしか使うしかないのかな。
+
